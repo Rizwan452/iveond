@@ -1469,7 +1469,8 @@ label {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  background: #c1c4ce;
+  /* background: #c1c4ce; */
+  background-color: #f5e0cc;
   padding-bottom: 60px;
   position: relative;
 }
@@ -1591,7 +1592,7 @@ label {
   margin-right: 70px;
   padding: 0;
   list-style: none;
-  opacity: 0.7;
+  /* opacity: 0.7; */
 }
 
 .featured-services .logos ul li:last-child {
@@ -1602,10 +1603,10 @@ label {
   opacity: 1;
 }
 
-.featured-services .logos ul li img {
+/* .featured-services .logos ul li img {
   -webkit-filter: brightness(1) invert(1);
   filter: brightness(1) invert(1);
-}
+} */
 
 /* IMAGE CONTENT BOX */
 .image-content-box {

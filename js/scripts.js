@@ -111,9 +111,9 @@
 		
 			if ($(document).scrollTop() > position2-300){
 			if (!lastWasLower)
-				$('#1').html('1700');
-				$('#2').html('88');
-				$('#3').html('96');
+				$('#1').html('30');
+				$('#2').html('150');
+				$('#3').html('20');
 				$('#4').html('94329');
 		
 			lastWasLower = true;
@@ -244,43 +244,43 @@
 	
 	
 		// MASONRY
-		var $container = $('.masonry').imagesLoaded( function() {
-			$container.isotope({
-			  itemSelector: '.masonry li',
-			  layoutMode: 'masonry'
-			});
-    	});
+		// var $container = $('.masonry').imagesLoaded( function() {
+		// 	$container.isotope({
+		// 	  itemSelector: '.masonry li',
+		// 	  layoutMode: 'masonry'
+		// 	});
+    	// });
 	
 	
 	
 		
 	
 		// ISOTOPE FILTER
-			var $container = $('.masonry');
-			$container.isotope({
-			filter: '*',
-			animationOptions: {
-			duration: 750,
-			easing: 'linear',
-			queue: false
-			}
-			});
+			// var $container = $('.masonry');
+			// $container.isotope({
+			// filter: '*',
+			// animationOptions: {
+			// duration: 750,
+			// easing: 'linear',
+			// queue: false
+			// }
+			// });
 
-			$('.showcase-filter li a').on('click', function(e) {
-			$('.showcase-filter li a.current').removeClass('current');
-			$(this).addClass('current');
+			// $('.showcase-filter li a').on('click', function(e) {
+			// $('.showcase-filter li a.current').removeClass('current');
+			// $(this).addClass('current');
 
-			var selector = $(this).attr('data-filter');
-			$container.isotope({
-				filter: selector,
-				animationOptions: {
-				duration: 750,
-				easing: 'linear',
-				queue: false
-				}
-			});
-			return false;
-			}); 
+			// var selector = $(this).attr('data-filter');
+			// $container.isotope({
+			// 	filter: selector,
+			// 	animationOptions: {
+			// 	duration: 750,
+			// 	easing: 'linear',
+			// 	queue: false
+			// 	}
+			// });
+			// return false;
+			// }); 
 
 
 
