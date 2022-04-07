@@ -1279,7 +1279,7 @@ label {
   float: right;
   margin-left: -10px;
   margin-top: 5px;
-  background: #282f4a;
+  background: #F2811D;
   -webkit-transform: skewX(-20deg);
           transform: skewX(-20deg);
   position: relative;
@@ -1290,6 +1290,10 @@ label {
   color: #F2811D;
   text-decoration: none;
   border-color: #F2811D;
+}
+
+.slider .swiper-slide a:hover span{
+  background: #ffffff;
 }
 
 .slider .swiper-container {
