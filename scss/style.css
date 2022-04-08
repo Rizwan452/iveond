@@ -69,6 +69,15 @@ theme.
   outline: none !important;
 }
 
+.icon-24{
+  font-size: 24px;
+  color: #F2811D;
+}
+
+.text-orange{
+  color: #F2811D;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -3671,7 +3680,7 @@ label {
 
 .contact a {
   color: #0D47A1;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .contact label {
