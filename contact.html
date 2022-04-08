@@ -42,7 +42,7 @@
 <link rel="stylesheet" href="css/fancybox.min.css">
 <link rel="stylesheet" href="css/swiper.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
   <header class="header">
@@ -162,26 +162,110 @@
  <section class="contact">
     <div class="container">
       <div class="row">
-        <div class="col-lg-5 col-md-12 wow fadeIn">
+        <div class="col-lg-6 col-md-12 wow fadeIn">
           <div class="section-title"> 
             <!-- <span>01</span> -->
           <h2>Say Hello !</h2>
           <h6>Its not difficult to track down us, so a speedy visit us for more information.</h6>
+          <br>
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-link active" id="nav-India-tab" data-toggle="tab" href="#nav-India" role="tab" aria-controls="nav-India" aria-selected="true">India</a>
+              <a class="nav-link" id="nav-Saudi Arabia-tab" data-toggle="tab" href="#nav-Saudi-Arabia" role="tab" aria-controls="nav-Saudi Arabia" aria-selected="false">Saudi Arabia</a>
+              <a class="nav-link" id="nav-United States-tab" data-toggle="tab" href="#nav-United-States" role="tab" aria-controls="nav-United States" aria-selected="false">United States</a>
+              <a class="nav-link" id="nav-Oman Regional Office-tab" data-toggle="tab" href="#nav-Oman-Regional-Office" role="tab" aria-controls="nav-Oman Regional Office" aria-selected="false">Oman Regional Office</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-India" role="tabpanel" aria-labelledby="nav-India-tab">
+              <address class="mt-4">
+                <p>
+                  8th Floor,Survey.No 115/1,<br>
+                  Kapil Towers,ISB Rd,<br>
+                  Financial District, Gachibowli,<br>
+                  Nanakaramguda, Hyderabad,<br>
+                  Telangana 500032.<br>
+                  
+                  +91 7207310409<br>
+                  E-mail info@Iveond.com
+                </p>
+
+            </address>
+
+            <div class="map mapouter">
+              <div class="gmap_canvas">
+                <iframe width="500" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=iveond&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>          
+              </div>
+            </div> 
+            </div>
+
+
+            <div class="tab-pane fade" id="nav-Saudi-Arabia" role="tabpanel" aria-labelledby="nav-Saudi Arabia-tab">
+              <address class="mt-4">
+                <p>
+              Umm Al Hammam Street,<br>
+              P.O. Box - 5599,<br>
+              Riyadh - 11544,<br>
+              Saudi Arabia.<br>
+              
+              (+966) 555 569 316<br>
+              info@iveond.com
+            </p>
+            </address>
+
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Umm%20Al%20Hammam%20Street&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div></div>
+            
+            </div>
+
+
+            <div class="tab-pane fade" id="nav-United-States" role="tabpanel" aria-labelledby="nav-contact-tab">
+              
+              <address class="mt-4">
+                <p>
+              2150 North First Street,<br>
+              San Jose,<br>
+              California-95131,<br>
+              United States.<br>
+              (+1)-2134604609<br>
+              info@iveond.com
+            </p>
+            </address>
+
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=2150%20North%20First%20Street,%20San%20Jose,%20California-95131,%20United%20States.&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div></div>
+
+            </div>
+            
+            
+            <div class="tab-pane fade" id="nav-Oman-Regional-Office" role="tabpanel" aria-labelledby="nav-contact-tab">
+              
+              <address class="mt-4">
+                <p>
+              DAR AL ARAB AL WATANIYA LLC,<br>
+              P.O:1215, P.C:112,<br>
+              Ruwi, Muscat,<br>
+              Sultanate of Oman.<br>
+              (+968)-98014920<br>
+              info-oman@iveond.com
+            </p>
+            </address>
+
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=1215,%20112%20Ruwi%20St,%20Muscat%20112,%20Oman&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+
+            </div>
+          </div>
         </div>
         <!-- end section-title --> 
         <!-- <div class="map" id="map"></div> -->
-        <div class="map mapouter">
-          <div class="gmap_canvas">
-            <iframe width="500" height="450" id="gmap_canvas" src="https://maps.google.com/maps?q=iveond&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>          
-          </div>
-        </div>         
+        
         <!-- end map -->
         </div>
         <!-- end col-6 -->
-        <div class="col-lg-7 col-md-12 wow fadeIn px-5">
+        <div class="col-lg-6 col-md-12 wow fadeIn px-5">
          <div class="row inner">
          	<div class="col-md-6">
-            <address>
+            <!-- <address>
               <h6>India</h6>
               <p>8th Floor,Survey.No 115/1, <br>
                 Kapil Towers,ISB Rd, <br>
@@ -190,12 +274,12 @@
                 Telangana 500032.</p>
               <p>+91 7207310409<br>
                 E-mail <a href="#">info@Iveond.com</a></p>
-              </address>
+              </address> -->
  
          	</div>
          	<!-- end col-6 -->
          	<div class="col-md-6">
-         		 <address>
+         		 <!-- <address>
            <h6>Saudi Arabia</h6>
            <p>
            <span>  Umm Al Hammam Street,<br>
@@ -206,7 +290,7 @@
             <a class="contacts-item__link" href="tel:(+966) 555 569 316">(+966) 555 569 316</a> <br>
             <a class="contacts-item__link" href="mailto:info@iveond.com">info@iveond.com</a>
           </p>
-            </address> 
+            </address>  -->
          	</div>
          	<!-- end col-6 -->
          </div>
