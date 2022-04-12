@@ -1600,7 +1600,7 @@ label {
   margin-right: 70px;
   padding: 0;
   list-style: none;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .featured-services .logos ul li:last-child {
@@ -1608,13 +1608,13 @@ label {
 }
 
 .featured-services .logos ul li:hover {
-  opacity: 1;
+  opacity: 0.8;
 }
 
-.featured-services .logos ul li img {
+/* .featured-services .logos ul li img {
   -webkit-filter: brightness(1) invert(1);
   filter: brightness(1) invert(1);
-}
+} */
 
 /* IMAGE CONTENT BOX */
 .image-content-box {
