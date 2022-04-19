@@ -51,7 +51,7 @@
             <li><a href="artificial-intelligence.php">AI</a></li>
             <li><a href="optical-character-recognision.php">OCR</a></li>
             <li><a href="internet-of-things.php">IoT</a></li>
-            <li><a href="big-data.php">Big Data</a></li>
+            <li><a href="blockchain.php">Blockchain</a></li>
           </ul>
         </div>
         <!-- end col-2 -->
