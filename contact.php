@@ -1,3 +1,34 @@
+<?php
+$host = "localhost";
+$userName = "root";
+$password = "";
+$dbName = "iveond";
+// Create database connection
+$conn = new mysqli($host, $userName, $password, $dbName);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+if(isset($_POST['submit']))
+{
+$name = $conn->real_escape_string($_POST['name']);
+// $surname = $conn->real_escape_string($_POST['surname']);
+$email = $conn->real_escape_string($_POST['email']);
+$phone = $conn->real_escape_string($_POST['phone']);
+$message = $conn->real_escape_string($_POST['message']);
+
+
+$sql="INSERT INTO contact_form (name,email,phone,message) VALUES ('".$name."','".$email."','".$phone."','".$message."')";
+if(!$result = $conn->query($sql)){
+die('There was an error running the query [' . $conn->error . ']');
+}
+else
+{
+echo "Thank you! We will contact you soon";
+}
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -73,8 +104,10 @@
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
               <a class="nav-link active" id="nav-India-tab" data-toggle="tab" href="#nav-India" role="tab" aria-controls="nav-India" aria-selected="true">India</a>
               <a class="nav-link" id="nav-Saudi Arabia-tab" data-toggle="tab" href="#nav-Saudi-Arabia" role="tab" aria-controls="nav-Saudi Arabia" aria-selected="false">Saudi Arabia</a>
+              <a class="nav-link" id="nav-Dubai-tab" data-toggle="tab" href="#nav-Dubai" role="tab" aria-controls="nav-Dubai" aria-selected="false">Dubai</a>
               <a class="nav-link" id="nav-United States-tab" data-toggle="tab" href="#nav-United-States" role="tab" aria-controls="nav-United States" aria-selected="false">United States</a>
-              <a class="nav-link" id="nav-Oman Regional Office-tab" data-toggle="tab" href="#nav-Oman-Regional-Office" role="tab" aria-controls="nav-Oman Regional Office" aria-selected="false">Oman Regional Office</a>
+              <a class="nav-link" id="nav-Oman Regional Office-tab" data-toggle="tab" href="#nav-Oman-Regional-Office" role="tab" aria-controls="nav-Oman Regional Office" aria-selected="false">Oman</a>
+ 
             </div>
           </nav>
           <div class="tab-content" id="nav-tabContent">
@@ -118,12 +151,6 @@
                     </div>
                   </div>
                   
-                   
-
-                   
-                  
-         
-
             </address>
 
             <div class="map mapouter">
@@ -179,6 +206,56 @@
             </div></div>
             
             </div>
+
+
+            <div class="tab-pane fade show" id="nav-Dubai" role="tabpanel" aria-labelledby="nav-Dubai-tab">
+              <address class="mt-4">
+                  
+                   <!-- address -->
+                  <div class="row no-gutters">                 
+                    <div class="col-1 text-center">
+                      <i class="fa fa-map-marker display-6 icon-24"></i>
+                    </div>
+                    <div class="col-11">
+                    Dubai Silicon Oasis,<br>
+                    PO Box 6009 ,<br>
+                    Dubai United Arab Emirates.
+                    </div>
+                  </div>
+
+                 
+                    <!-- phone -->
+                    <div class="row no-gutters mt-3">
+                    <div class="col-1 text-center">
+                      <i class="fa fa-mobile icon-24"></i>
+                    </div>
+                    <div class="col-11">
+                      <a class="text-decoration-none" href="tel:+971 4501500"> +971-4-501-500</a>
+                    </div>
+                  </div>
+
+
+                    <!-- email -->
+                    <div class="row no-gutters mt-3">
+                    <div class="col-1 text-center">
+                      <i class="fa fa-envelope text-orange"></i>
+                    </div>
+                    <div class="col-11">
+                      <a class="text-decoration-none" href="mailto:info@Iveond.com">info@Iveond.com</a>
+                    </div>
+                  </div>
+                  
+            </address>
+
+            <div class="map mapouter">
+              <div class="gmap_canvas">
+              <iframe width="500" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=Dubai%20Silicon%20Oasis&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+              </div>
+            </div> 
+            </div>
+
+
+
 
 
             <div class="tab-pane fade" id="nav-United-States" role="tabpanel" aria-labelledby="nav-contact-tab">
@@ -273,8 +350,13 @@
             <div class="mapouter"><div class="gmap_canvas"><iframe width="500" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=1215,%20112%20Ruwi%20St,%20Muscat%20112,%20Oman&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
 
             </div>
+            
           </div>
         </div>
+
+
+
+        
         <!-- end section-title --> 
         <!-- <div class="map" id="map"></div> -->
         
@@ -313,30 +395,30 @@
          	<!-- end col-6 -->
          </div>
          <!-- end row inner -->
-          <form class="row" id="contact" name="contact" method="post">
-            <div class="form-group col-sm-6 col-12">
-              <label>Your name</label>
+          <form class="row" id="contactform" name="contact" method="post" action="">
+            <div class="form-group col-sm-12 col-12">
+              <label>Your Full name</label>
                <input type="text" name="name" id="name" required>
             </div>
             <!-- end form-group -->
-            <div class="form-group col-sm-6 col-12">
+            <!-- <div class="form-group col-sm-6 col-12">
               <label>Your surname</label>
                <input type="text" name="surname" id="surname" required>
-            </div>
+            </div> -->
             <!-- end form-group -->
             <div class="form-group col-sm-6 col-12">
               <label>Your e-mail</label>
-               <input type="text" name="email" id="email" required>
+               <input type="email" name="email" id="email" required>
             </div>
             <!-- end form-group -->
             <div class="form-group col-sm-6 col-12">
               <label>Your phone</label>
-              <input type="text" name="subject" id="subject" required>
+              <input type="text" name="phone" id="phone" required>
             </div>
             <!-- end form-group -->
             <div class="form-group col-12">
               <label>Your message</label>
-              <textarea name="message" id="message" required></textarea>
+              <textarea name="message" id="message"></textarea>
             </div>
             <!-- end form-group -->
             <div class="form-group col-12">
